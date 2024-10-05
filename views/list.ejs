@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="box" id="heading">
+        <h1><%= Title %></h1>
+    </div>
+
+    <div class="box">
+        <% for (let i = 0; i < datas.length; ++i) { %>
+            <form action="/delete" method="post" class="item-form">
+                <div class="item">
+                    <input type="checkbox" onChange="this.form.submit()" name="checkbox" value="<%= datas[i]._id %>">
+                    <p><%= datas[i].name %></p>
+                </div>
+                <input type="hidden" name="page" value="<%= Title %>">
+            </form>
+        <% } %>
+
+        <form class="item add-item-form" action="/" method="post">
+            <input type="text" name="newItems" placeholder="Add a new task" autocomplete="off" required>
+            <button type="submit" name="itemVal" value="<%= Title %>">+</button>
+        </form>
+
+        <footer>
+            <p>Made with ❤️ by Ashutosh Gupta</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* General styling for the body and page layout */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 350px;
+  margin: 20px;
+  position: relative;
+}
+
+#heading h1 {
+  font-size: 28px;
+  margin: 0;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.item:hover {
+  background-color: #f9f9f9;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.item p {
+  margin: 0;
+  flex: 1;
+  color: #555;
+}
+
+.item-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-item-form {
+  margin-top: 15px;
+}
+
+.add-item-form input[type="text"] {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 75%;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.add-item-form input[type="text"]:focus {
+  border-color: #28a745;
+}
+
+.add-item-form button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.add-item-form button:hover {
+  background-color: #218838;
+}
+
+footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #888;
+}
+
+footer p {
+  margin: 0;
+}
