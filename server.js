@@ -73,7 +73,7 @@ app.post("/", function(req,res){
         res.redirect("/");
     }else{
         Lists.findOne({name:list}).then((results) =>{
-            results.items.push(item);                 // we add new item in the array of particlar title
+            results.items.push(item);                 
 
             results.save();
             res.redirect("/" + list);
@@ -88,7 +88,7 @@ app.post("/delete", async function(req, res) {
 
     if (page === today) {
         try {
-            await Item.findByIdAndDelete(itemToDelete);  // Removed the object format as findByIdAndDelete directly takes the ID
+            await Item.findByIdAndDelete(itemToDelete); 
             res.redirect("/");
         } catch (error) {
             console.error(error);
